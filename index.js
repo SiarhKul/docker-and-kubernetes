@@ -1,0 +1,25 @@
+const express = require('express');
+
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Hi there');
+});
+
+app.listen(8080, () => {
+  console.log('Listening on port 8080');
+});
+/*As mentioned earlier, Buildkit will hide away much of its progress which is something the legacy builder did not do. In the upcoming lectures will be discussing some output that will be quickly hidden by default. To see this output, you will want to pass the progress flag to the build command:
+
+docker build --progress=plain .
+
+Additionally, you can pass the no-cache flag to disable any caching:
+
+docker build --no-cache --progress=plain .
+
+Note - Do not try to use the no-cache flag with Lecture 47 Minimizing Cache Busting
+
+Disabling Buildkit to match course output
+To disable Buildkit, you can just pass the following variable to the build command:
+
+DOCKER_BUILDKIT=0 docker build .*/
