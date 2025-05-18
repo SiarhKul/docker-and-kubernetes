@@ -27,8 +27,8 @@ jobs:
         run: echo $(pwd)/deploy.zip
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4 
         with:
           name: deployment-package
-          path: $(pwd)/deploy.zip
+          path: deploy.zip
 
