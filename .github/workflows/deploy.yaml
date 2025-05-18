@@ -26,3 +26,9 @@ jobs:
       - name: Display deployment package path
         run: echo $(pwd)/deploy.zip
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: deployment-package
+          path: $(pwd)/deploy.zip
+
